@@ -13,6 +13,7 @@ import { CountHaircurtController } from "./controllers/haircut/CountHaircurtCont
 import { DetailHaircutController } from "./controllers/haircut/DetailHaircutController";
 
 import { NewScheduleController } from "./controllers/schedule/NewScheduleController";
+import { ListScheduleController } from "./controllers/schedule/ListScheduleController";
 
 import { isAuthenticated } from "./middlewares/isAuthenticated";
 
@@ -34,4 +35,5 @@ router.get('/haircut/detail', isAuthenticated, new DetailHaircutController().han
 
 // --Rotas schedule/serviços --
 router.post('/schedule', isAuthenticated, new NewScheduleController().handle)
+router.get('/schedule', isAuthenticated, new ListScheduleController().handle)
 export {router};
