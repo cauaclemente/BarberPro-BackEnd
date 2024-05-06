@@ -1,5 +1,5 @@
-import { stripe } from './stripe'
-import prismaClient from '../prisma/index'
+import { stripe } from './utils/stripe';
+import prismaClient from './prisma';
 
 export async function saveSubscription(
   subscriptionId: string,
